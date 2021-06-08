@@ -36,7 +36,7 @@ public class FragmentHome extends Fragment {
     @Nullable
     @Override
     public View onCreateView(LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
-        v = inflater.inflate(R.layout.fragment_home, container, false);
+        v = inflater.inflate(R.layout.activity_home_menu, container, false);
         home_textView_jumlahSaldo = v.findViewById(R.id.home_textView_rupiah);
         home_textView_paymentHistory = v.findViewById(R.id.home_textView_paymentHistory);
         home_button_isiSaldo = (Button) v.findViewById(R.id.home_button_isiSaldo);

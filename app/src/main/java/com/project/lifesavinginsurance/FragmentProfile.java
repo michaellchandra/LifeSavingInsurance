@@ -24,7 +24,7 @@ public class FragmentProfile extends Fragment {
     @Nullable
     @Override
     public View onCreateView(LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
-        v = inflater.inflate(R.layout.fragment_profile, container, false);
+        v = inflater.inflate(R.layout.activity_profile, container, false);
         profile_button_logout = v.findViewById(R.id.profile_button_logout);
 
         profile_textView_umur = v.findViewById(R.id.profile_textView_umur);
@@ -38,7 +38,7 @@ public class FragmentProfile extends Fragment {
 
         User user = intent.getParcelableExtra("IDnama");
 
-        profile_textView_nama.setText(user.getNama());
+//        profile_textView_nama.setText(user.getNama());
 
         profile_button_logout.setOnClickListener(new View.OnClickListener() {
             @Override

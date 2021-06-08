@@ -30,7 +30,7 @@ public class Payment extends AppCompatActivity {
 
     private String deposit;
 
-    private long TimeLeftinMillis = START_TIME_IN_MILLIS;
+//    private long TimeLeftinMillis = START_TIME_IN_MILLIS;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {

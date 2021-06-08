@@ -36,7 +36,7 @@ public class InputTransfer extends AppCompatActivity {
         transfer_imageView_back.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(getBaseContext(), HomeMenu.class);
+                Intent intent = new Intent(getBaseContext(), FragmentHome.class);
                 startActivity(intent);
             }
         });
