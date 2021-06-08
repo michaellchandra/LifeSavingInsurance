@@ -12,11 +12,13 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.LifeSavingInsurance">
-        <activity android:name=".MainActivity2"></activity>
+        <activity android:name=".AsuransiTradisional"></activity>
+        <activity android:name=".MenuToolbar" />
+        <activity android:name=".MainActivity2" />
         <activity
             android:name=".Loading"
             tools:ignore="Instantiatable" />
-        <activity android:name=".Profile"></activity>
+        <activity android:name=".Profile" />
         <activity android:name=".InputTransfer" />
         <activity android:name=".Support" />
         <activity android:name=".Payment" />
