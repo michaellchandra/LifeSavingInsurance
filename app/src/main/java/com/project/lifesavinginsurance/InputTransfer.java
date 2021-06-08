@@ -4,6 +4,7 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.provider.ContactsContract;
 import android.text.Editable;
 import android.text.TextWatcher;
 import android.view.View;
@@ -21,7 +22,7 @@ public class InputTransfer extends AppCompatActivity {
     private ImageView transfer_imageView_back;
     private TextInputLayout transfer_textInputLayout_jumlahTransfer;
     private Button transfer_button_pembayaran;
-    private ArrayList<Transfer> nominal;
+    private ArrayList<DataDeposit> nominal;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -63,9 +64,12 @@ public class InputTransfer extends AppCompatActivity {
 
             @Override
             public void onTextChanged(CharSequence s, int start, int before, int count) {
-                String deposit = transfer_textInputLayout_jumlahTransfer.getEditText().getText().toString().trim();
+                long deposit = Long.parseLong(transfer_textInputLayout_jumlahTransfer.getEditText().getText().toString().trim());
 
-                if(deposit.isEmpty()) {
+                nominal = new ArrayList<>();
+                nominal.add(new DataDeposit(deposit));
+
+                if(deposit <= 0) {
                     transfer_textInputLayout_jumlahTransfer.setError("Harap masukkan jumlah transfer");
                 } else {
                     transfer_textInputLayout_jumlahTransfer.setError("");

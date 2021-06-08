@@ -82,10 +82,10 @@
                     android:id="@+id/home_textView_jumlahSaldo"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="TextView"
-                    android:textColor="@color/white"
                     android:layout_marginLeft="80dp"
                     android:layout_marginTop="56dp"
+                    android:text="0"
+                    android:textColor="@color/white"
                     android:textSize="35dp"
                     android:textStyle="bold" />
 

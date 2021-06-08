@@ -14,21 +14,25 @@ import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import com.google.android.material.textfield.TextInputLayout;
+
+import java.util.ArrayList;
 import java.util.Locale;
 
+import Deposit.DataDeposit;
 import Deposit.Transfer;
 
 public class Payment extends AppCompatActivity {
 
-    private static final long START_TIME_IN_MILLIS = 600000;
+
     private CountDownTimer countDownTimer;
     private Button payment_button_confirm, transfer_button_pembayaran ;
     private ImageView payment_imageView_back;
+    private TextInputLayout transfer_textInputLayout_jumlahTransfer;
     private TextView payment_textView_jamOperasional, payment_textView_butuhBantuan, payment_textView_countdown, payment_textView_totalDeposit;
     Dialog popup_operasional;
     private boolean TimerRunning;
-
-    private String deposit;
+    private ArrayList<DataDeposit> nominal;
 
 //    private long TimeLeftinMillis = START_TIME_IN_MILLIS;
 
@@ -44,6 +48,7 @@ public class Payment extends AppCompatActivity {
         payment_imageView_back = findViewById(R.id.payment_imageView_back);
         payment_textView_totalDeposit = findViewById(R.id.payment_textView_totalDeposit);
         payment_button_confirm = findViewById(R.id.payment_button_confirm);
+        transfer_textInputLayout_jumlahTransfer = findViewById(R.id.transfer_textInputLayout_jumlahTransfer);
 
         popup_operasional = new Dialog(this);
 
@@ -74,11 +79,19 @@ public class Payment extends AppCompatActivity {
             @Override
             public void onClick(View v) {
 
-                Intent intent = new Intent(getBaseContext(), HomeMenu.class);
+                long deposit = Long.parseLong(transfer_textInputLayout_jumlahTransfer.getEditText().getText().toString().trim());
+                nominal = new ArrayList<>();
+                nominal.add(new DataDeposit(deposit));
+
+                Intent intent = new Intent(getBaseContext(), FragmentHome.class);
                 startActivity(intent);
                 finish();
 
                 Toast.makeText(Payment.this, "Terima Kasih Pembayaran Terkonfirmasi!", Toast.LENGTH_LONG).show();
+
+
+
+
             }
         });
 
@@ -93,7 +106,7 @@ public class Payment extends AppCompatActivity {
         payment_imageView_back.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent (getBaseContext(), LoginMenu.class);
+                Intent intent = new Intent (getBaseContext(), InputTransfer.class);
                 startActivity(intent);
             }
         });

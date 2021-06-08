@@ -11,12 +11,18 @@ import android.widget.TextView;
 import androidx.annotation.Nullable;
 import androidx.fragment.app.Fragment;
 
+import java.util.ArrayList;
+
+import Account.Akun;
 import Account.User;
 
 public class FragmentProfile extends Fragment {
     View v;
     private Button profile_button_logout;
     private TextView profile_textView_noTelp, profile_textView_umur, profile_textView_ttl,  profile_textView_nama, profile_textView_email ;
+    private ArrayList<User> user ;
+
+
 
     public FragmentProfile() {
     }
@@ -37,6 +43,12 @@ public class FragmentProfile extends Fragment {
 
 
         User user = intent.getParcelableExtra("IDnama");
+
+
+
+        profile_textView_nama.setText(user.getNama());
+
+
 
 //        profile_textView_nama.setText(user.getNama());
 
