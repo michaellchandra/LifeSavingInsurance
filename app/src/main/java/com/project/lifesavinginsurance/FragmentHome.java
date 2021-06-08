@@ -7,6 +7,7 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
+import android.widget.ImageView;
 import android.widget.TextView;
 
 import androidx.annotation.Nullable;
@@ -24,8 +25,9 @@ import Deposit.DataDeposit;
 public class FragmentHome extends Fragment {
     View v;
     private Button home_button_plan100, home_button_isiSaldo;
-    private TextView home_textView_paymentHistory, home_textView_jumlahSaldo;
+    private TextView home_textView_paymentHistory, home_textView_jumlahSaldo ;
     private ArrayList<DataDeposit> nominal ;
+    private ImageView home_imageView_profile;
 
     @Override
     public void onCreate(@Nullable Bundle savedInstanceState){
@@ -44,6 +46,7 @@ public class FragmentHome extends Fragment {
         home_textView_paymentHistory = v.findViewById(R.id.home_textView_paymentHistory);
         home_button_isiSaldo = (Button) v.findViewById(R.id.home_button_isiSaldo);
         home_button_plan100 = (Button) v.findViewById(R.id.home_button_plan100);
+        home_imageView_profile = v.findViewById(R.id.home_imageView_profile);
 
         ImageSlider imageSlider = v.findViewById(R.id.home_imageSlider);
         List<SlideModel> slideModels = new ArrayList<>();
@@ -78,7 +81,13 @@ public class FragmentHome extends Fragment {
         });
 
 
-
+        home_imageView_profile.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(getContext(), Profile.class);
+                startActivity(intent);
+            }
+        });
 
         home_button_isiSaldo.setOnClickListener(new View.OnClickListener() {
             @Override

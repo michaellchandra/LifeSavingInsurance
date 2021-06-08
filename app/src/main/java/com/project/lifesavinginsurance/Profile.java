@@ -32,6 +32,7 @@ public class Profile extends AppCompatActivity {
         intent = getIntent();
 
         User user = intent.getParcelableExtra("IDnama");
+//
 
         profile_textView_nama.setText(user.getNama());
 

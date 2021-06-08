@@ -57,7 +57,7 @@ public class LoginMenu extends AppCompatActivity {
                         if(Akun.listUser.get(i).getEmail().equalsIgnoreCase(email) && Akun.listUser.get(i).getPassword().equalsIgnoreCase(password)){
                             exists = true;
                             Toast.makeText(getBaseContext(), "Login Berhasil!", Toast.LENGTH_LONG).show();
-                            Intent intent = new Intent(getBaseContext(), HomeMenu.class);
+                            Intent intent = new Intent(getBaseContext(), MenuToolbar.class);
                             intent.putExtra("IDnama", temp);
                             intent.putExtra("index", i);
                             startActivity(intent);

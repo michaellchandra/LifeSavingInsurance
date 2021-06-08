@@ -43,7 +43,7 @@ public class FragmentProfile extends Fragment {
 
 
         User user = intent.getParcelableExtra("IDnama");
-
+//        user.setNama(RegisterMenu(nama));
 
 
         profile_textView_nama.setText(user.getNama());
