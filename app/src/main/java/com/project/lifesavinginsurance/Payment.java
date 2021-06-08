@@ -79,9 +79,9 @@ public class Payment extends AppCompatActivity {
             @Override
             public void onClick(View v) {
 
-                long deposit = Long.parseLong(transfer_textInputLayout_jumlahTransfer.getEditText().getText().toString().trim());
-                nominal = new ArrayList<>();
-                nominal.add(new DataDeposit(deposit));
+//                long deposit = Long.parseLong(transfer_textInputLayout_jumlahTransfer.getEditText().getText().toString().trim());
+//                nominal = new ArrayList<>();
+//                nominal.add(new DataDeposit(deposit));
 
                 Intent intent = new Intent(getBaseContext(), FragmentHome.class);
                 startActivity(intent);

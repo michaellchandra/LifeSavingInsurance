@@ -19,7 +19,7 @@
             android:layout_height="wrap_content">
 
             <androidx.appcompat.widget.Toolbar
-                android:id="@+id/toolbar8"
+                android:id="@+id/formplan_toolbar"
                 android:layout_width="409dp"
                 android:layout_height="wrap_content"
                 android:background="?attr/colorPrimary"
@@ -53,7 +53,7 @@
                 android:text="Nama Calon Tertanggung"
                 android:textColor="#000000"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/toolbar8" />
+                app:layout_constraintTop_toBottomOf="@+id/formplan_toolbar" />
 
             <TextView
                 android:id="@+id/textView34"
@@ -190,7 +190,7 @@
                 android:layout_height="wrap_content"
                 android:layout_marginStart="20dp"
                 android:layout_marginTop="26dp"
-                android:text="Hubungan dgn Ttg"
+                android:text="Hubungan dgn Tertanggung"
                 android:textColor="#000000"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/textInputLayout4" />
@@ -246,7 +246,7 @@
                 android:id="@+id/textView40"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginStart="16dp"
+                android:layout_marginStart="20dp"
                 android:layout_marginTop="26dp"
                 android:text="Masa Pembayaran Premi"
                 android:textColor="#000000"
