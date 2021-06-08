@@ -18,10 +18,10 @@ public class MenuToolbar extends AppCompatActivity {
         tabLayout = (TabLayout) findViewById(R.id.tablayout_id);
         viewPager = (ViewPager) findViewById(R.id.viewpager_id);
         adapter = new ViewPagerAdapter(getSupportFragmentManager());
-        adapter.AddFragment(new FragmentHome(),"");
+        adapter.AddFragment(new FragmentHome(),"Home");
         adapter.AddFragment(new FragmentNotification(),"");
-        adapter.AddFragment(new FragmentFinance(),"");
-        adapter.AddFragment(new FragmentProfile(),"");
+        adapter.AddFragment(new FragmentFinance(),"Support");
+        adapter.AddFragment(new FragmentProfile(),"Profile");
         viewPager.setAdapter(adapter);
         tabLayout.setupWithViewPager(viewPager);
 

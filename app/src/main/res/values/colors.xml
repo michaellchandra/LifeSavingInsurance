@@ -10,5 +10,6 @@
     <color name="white">#FFFFFFFF</color>
     <color name="bluesky">#0069EA</color>
     <color name="red">#FFFF0000</color>
+    <color name="grey">#f2f2f2</color>
 
 </resources>

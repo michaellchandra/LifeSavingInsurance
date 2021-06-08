@@ -49,20 +49,21 @@ public class Payment extends AppCompatActivity {
 
         Intent intent = getIntent();
         String saldoDeposit = intent.getStringExtra("totalDeposit");
+
         payment_textView_totalDeposit.setText(saldoDeposit);
 
-        countDownTimer = new CountDownTimer(TimeLeftinMillis,1000) {
-            @Override
-            public void onTick(long millisUntilFinished) {
-                TimeLeftinMillis = millisUntilFinished;
-            }
-
-            @Override
-            public void onFinish() {
-
-            }
-        }.start();
-        TimerRunning = true;
+//        countDownTimer = new CountDownTimer(TimeLeftinMillis,1000) {
+//            @Override
+//            public void onTick(long millisUntilFinished) {
+//                TimeLeftinMillis = millisUntilFinished;
+//            }
+//
+//            @Override
+//            public void onFinish() {
+//
+//            }
+//        }.start();
+//        TimerRunning = true;
 //        Data= new ArrayList<JumlahDeposit>();
 //        for(int i = 0; i <Data.size(); i++) {
 //        JumlahDeposit data= Data.get(i);
@@ -100,30 +101,6 @@ public class Payment extends AppCompatActivity {
 
     }
 
-    private void startTimer() {
-        countDownTimer = new CountDownTimer(TimeLeftinMillis, 1000) {
-            @Override
-            public void onTick(long millisUntilFinished) {
-                TimeLeftinMillis = millisUntilFinished;
-                updateCountdownText();
-            }
-
-            @Override
-            public void onFinish() {
-
-            }
-        }.start();
-        TimerRunning = true;
-
-    }
-
-    private void updateCountdownText() {
-        int minutes = (int) (TimeLeftinMillis / 1000) / 60;
-        int seconds = (int) (TimeLeftinMillis / 1000) % 60;
-
-        String timeLeftFormatted = String.format(Locale.getDefault(),"%02d:%02d", minutes, seconds);
-        payment_textView_countdown.setText(timeLeftFormatted);
-    }
 
 
     public void TampilPopUp (View view) {
