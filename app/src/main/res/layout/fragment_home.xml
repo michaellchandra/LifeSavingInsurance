@@ -57,7 +57,7 @@
                     android:textStyle="normal" />
 
                 <TextView
-                    android:id="@+id/home_textView_jumlahSaldo"
+                    android:id="@+id/home_textView_rupiah"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginLeft="20dp"

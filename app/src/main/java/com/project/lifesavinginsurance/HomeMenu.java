@@ -5,11 +5,9 @@ import androidx.appcompat.app.AppCompatActivity;
 import android.content.Intent;
 import android.net.Uri;
 import android.os.Bundle;
-import android.renderscript.ScriptGroup;
 import android.view.View;
 import android.widget.Button;
 import android.widget.TextView;
-import android.widget.Toast;
 
 import com.denzcoskun.imageslider.ImageSlider;
 import com.denzcoskun.imageslider.interfaces.ItemClickListener;
@@ -64,7 +62,7 @@ public class HomeMenu extends AppCompatActivity {
 
         home_button_isiSaldo = findViewById(R.id.home_button_isiSaldo);
         home_button_plan100 = findViewById(R.id.home_button_plan100);
-        home_textView_jumlahSaldo = findViewById(R.id.home_textView_jumlahSaldo);
+        home_textView_jumlahSaldo = findViewById(R.id.home_textView_rupiah);
         home_textView_paymentHistory = findViewById(R.id.home_textView_paymentHistory);
 
 
