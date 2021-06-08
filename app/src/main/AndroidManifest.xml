@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
     package="com.project.lifesavinginsurance">
 
     <uses-permission android:name="android.permission.INTERNET" />
@@ -11,33 +12,25 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.LifeSavingInsurance">
+        <activity android:name=".Loading"
+            tools:ignore="Instantiatable"></activity>
         <activity android:name=".Profile">
 
-
         </activity>
-        <activity android:name=".InputTransfer" >
-
-
-        </activity>
+        <activity android:name=".InputTransfer"></activity>
         <activity android:name=".Support" />
-        <activity android:name=".Payment" >
-
-        </activity>
+        <activity android:name=".Payment"></activity>
         <activity android:name=".Passcode" />
         <activity android:name=".RegisterMenu" />
-        <activity android:name=".HomeMenu">
+        <activity android:name=".HomeMenu"></activity>
+        <activity android:name=".LoginMenu"></activity>
+        <activity android:name=".MainActivity">
 
-        </activity>
-        <activity android:name=".LoginMenu" >
-
-        </activity>
-        <activity android:name=".MainActivity" >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
-
         </activity>
     </application>
 
