@@ -60,7 +60,7 @@ public class AsuransiTradisional extends AppCompatActivity {
         main_textinput_umur = findViewById(R.id.main_textinput_umur);
         main_button_hitung = findViewById(R.id.main_button_hitung);
         main_textinput_masa = findViewById(R.id.main_textinput_masa);
-        main_button_process = findViewById(R.id.main_button_process);
+
         plan100_umur = findViewById(R.id.plan100_umur);
         plan100_tahunan = findViewById(R.id.plan100_tahunan);
         plan100_semesteran = findViewById(R.id.plan100_semesteran);
@@ -897,13 +897,13 @@ public class AsuransiTradisional extends AppCompatActivity {
             }
         });
 
-        main_button_process.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Intent intent = new Intent(getBaseContext(), FormPlan100.class);
-                startActivity(intent);
-            }
-        });
+//        main_button_process.setOnClickListener(new View.OnClickListener() {
+//            @Override
+//            public void onClick(View v) {
+//                Intent intent = new Intent(getBaseContext(), FormPlan100.class);
+//                startActivity(intent);
+//            }
+//        });
 
 
     }
