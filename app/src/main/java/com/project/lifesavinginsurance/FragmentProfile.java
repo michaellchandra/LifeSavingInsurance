@@ -23,7 +23,7 @@ public class FragmentProfile extends Fragment {
     private ArrayList<User> user ;
 
 
-
+    private Intent intent;
     public FragmentProfile() {
     }
 
@@ -32,21 +32,21 @@ public class FragmentProfile extends Fragment {
     public View onCreateView(LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
         v = inflater.inflate(R.layout.activity_profile, container, false);
         profile_button_logout = v.findViewById(R.id.profile_button_logout);
-
         profile_textView_umur = v.findViewById(R.id.profile_textView_umur);
         profile_textView_ttl = v.findViewById(R.id.profile_textView_ttl);
         profile_textView_noTelp = v.findViewById(R.id.profile_textView_noTelp);
         profile_textView_nama = v.findViewById(R.id.profile_textView_nama);
         profile_textView_email = v.findViewById(R.id.profile_textView_email);
 
-        Intent intent = new Intent();
+//        User user = intent.getParcelableExtra("IDnama");
 
-
-        User user = intent.getParcelableExtra("IDnama");
-
-        profile_textView_nama.setText(user.getNama());
-
-
+//        profile_textView_nama.setText(user.getNama());
+//
+//
+//
+//        profile_textView_nama.setText(user.getNama());
+//        profile_textView_noTelp.setText(user.getTelepon());
+//        profile_textView_email.setText(user.getEmail());
 
 //        profile_textView_nama.setText(user.getNama());
 

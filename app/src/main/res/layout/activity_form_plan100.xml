@@ -11,8 +11,10 @@
         android:layout_height="match_parent"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent">
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="1.0">
 
         <androidx.constraintlayout.widget.ConstraintLayout
             android:layout_width="match_parent"
@@ -42,7 +44,7 @@
                 android:text="Umur"
                 android:textColor="#000000"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/textInputLayout" />
+                app:layout_constraintTop_toBottomOf="@+id/form_textinput_namacalon" />
 
             <TextView
                 android:id="@+id/textView32"
@@ -64,7 +66,7 @@
                 android:text="Jenis Kelamin"
                 android:textColor="#000000"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/textInputLayout2" />
+                app:layout_constraintTop_toBottomOf="@+id/form_textinput_umurcalon" />
 
             <TextView
                 android:id="@+id/textView35"
@@ -75,34 +77,10 @@
                 android:text="Nama Pemegang Polis"
                 android:textColor="#000000"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/main_radiogroup_jeniskelamin" />
-
-            <RadioGroup
-                android:id="@+id/main_radiogroup_jeniskelamin"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginStart="24dp"
-                android:layout_marginTop="13dp"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/textView34">
-
-                <RadioButton
-                    android:id="@+id/main_radio2"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:text="Pria"
-                    android:textSize="12sp" />
-
-                <RadioButton
-                    android:id="@+id/main_radio1"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:text="Wanita"
-                    android:textSize="12sp" />
-            </RadioGroup>
+                app:layout_constraintTop_toBottomOf="@+id/form_radioGroup" />
 
             <com.google.android.material.textfield.TextInputLayout
-                android:id="@+id/textInputLayout2"
+                android:id="@+id/form_textinput_umurcalon"
                 android:layout_width="350dp"
                 android:layout_height="40dp"
                 android:layout_marginTop="13dp"
@@ -120,7 +98,7 @@
             </com.google.android.material.textfield.TextInputLayout>
 
             <com.google.android.material.textfield.TextInputLayout
-                android:id="@+id/textInputLayout"
+                android:id="@+id/form_textinput_namacalon"
                 android:layout_width="350dp"
                 android:layout_height="40dp"
                 android:layout_marginTop="13dp"
@@ -138,7 +116,7 @@
             </com.google.android.material.textfield.TextInputLayout>
 
             <com.google.android.material.textfield.TextInputLayout
-                android:id="@+id/textInputLayout3"
+                android:id="@+id/form_textinput_namapemegang"
                 android:layout_width="350dp"
                 android:layout_height="40dp"
                 android:layout_marginTop="13dp"
@@ -164,10 +142,10 @@
                 android:text="Umur"
                 android:textColor="#000000"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/textInputLayout3" />
+                app:layout_constraintTop_toBottomOf="@+id/form_textinput_namapemegang" />
 
             <com.google.android.material.textfield.TextInputLayout
-                android:id="@+id/textInputLayout4"
+                android:id="@+id/form_textinput_umurpemegang"
                 android:layout_width="350dp"
                 android:layout_height="40dp"
                 android:layout_marginTop="13dp"
@@ -193,10 +171,10 @@
                 android:text="Hubungan dgn Tertanggung"
                 android:textColor="#000000"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/textInputLayout4" />
+                app:layout_constraintTop_toBottomOf="@+id/form_textinput_umurpemegang" />
 
             <com.google.android.material.textfield.TextInputLayout
-                android:id="@+id/textInputLayout5"
+                android:id="@+id/form_textinput_hubungan"
                 android:layout_width="350dp"
                 android:layout_height="40dp"
                 android:layout_marginTop="13dp"
@@ -222,10 +200,10 @@
                 android:text="Uang Pertanggungan"
                 android:textColor="#000000"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/textInputLayout5" />
+                app:layout_constraintTop_toBottomOf="@+id/form_textinput_hubungan" />
 
             <com.google.android.material.textfield.TextInputLayout
-                android:id="@+id/textInputLayout6"
+                android:id="@+id/form_textinput_uangpertanggungan"
                 android:layout_width="350dp"
                 android:layout_height="40dp"
                 android:layout_marginTop="13dp"
@@ -252,11 +230,11 @@
                 android:textColor="#000000"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/textInputLayout6"
+                app:layout_constraintTop_toBottomOf="@+id/form_textinput_uangpertanggungan"
                 app:layout_constraintVertical_bias="0.0" />
 
             <com.google.android.material.textfield.TextInputLayout
-                android:id="@+id/textInputLayout7"
+                android:id="@+id/form_textinput_masapembayaran"
                 android:layout_width="350dp"
                 android:layout_height="40dp"
                 android:layout_marginTop="13dp"
@@ -274,14 +252,36 @@
             </com.google.android.material.textfield.TextInputLayout>
 
             <Button
-                android:id="@+id/button"
+                android:id="@+id/form_button"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="150dp"
                 android:text="Button"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/textInputLayout6" />
+                app:layout_constraintTop_toBottomOf="@+id/form_textinput_uangpertanggungan" />
+
+            <RadioGroup
+                android:id="@+id/form_radioGroup"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="25dp"
+                android:layout_marginTop="13dp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/textView34">
+
+                <RadioButton
+                    android:id="@+id/form_radioButton1"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Pria" />
+
+                <RadioButton
+                    android:id="@+id/form_radioButton2"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Wanita" />
+            </RadioGroup>
         </androidx.constraintlayout.widget.ConstraintLayout>
     </ScrollView>
 

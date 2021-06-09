@@ -209,7 +209,7 @@
                     android:layout_height="wrap_content"
                     android:layout_marginTop="13dp"
                     android:layout_marginEnd="70dp"
-                    android:text="Button"
+                    android:text="Klaim"
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintTop_toBottomOf="@+id/textView55" />
 

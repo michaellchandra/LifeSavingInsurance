@@ -12,14 +12,10 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.LifeSavingInsurance">
-        <activity android:name=".FormPlan100"></activity>
+        <activity android:name=".ListAsuransi"></activity>
+        <activity android:name=".FormPlan100" />
         <activity android:name=".AsuransiTradisional" />
-        <activity android:name=".MenuToolbar" >
-
-
-        </activity>
-
-
+        <activity android:name=".MenuToolbar"></activity>
         <activity
             android:name=".Loading"
             tools:ignore="Instantiatable" />

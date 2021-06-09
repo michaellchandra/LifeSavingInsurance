@@ -16,7 +16,6 @@ import android.widget.TextView;
 
 import com.google.android.material.textfield.TextInputLayout;
 
-import java.util.Calendar;
 import java.util.List;
 
 import Model.Plan100Model;
@@ -70,7 +69,7 @@ public class AsuransiTradisional extends AppCompatActivity {
         plan100_uangp = findViewById(R.id.plan100_uangp);
         plan100_masap = findViewById(R.id.plan100_masap);
         plan100_masaa = findViewById(R.id.plan100_masaa);
-        main_radiogroup_jeniskelamin = findViewById(R.id.main_radiogroup_jeniskelamin);
+        main_radiogroup_jeniskelamin = findViewById(R.id.menu_radiogroup_jeniskelamin);
 
 
         main_button_hitung.setOnClickListener(new View.OnClickListener() {
@@ -911,10 +910,10 @@ public class AsuransiTradisional extends AppCompatActivity {
 
     private void findRadioButton(int checkId){
         switch(checkId){
-            case R.id.main_radio1:
+            case R.id.menu_radio1:
                 jeniskelamin="pria";
                 break;
-            case R.id.main_radio2:
+            case R.id.menu_radio2:
                 jeniskelamin="wanita";
         }
     }

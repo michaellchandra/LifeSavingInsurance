@@ -5,6 +5,6 @@ import java.util.ArrayList;
 
 public class Akun {
 
-    public static ArrayList <User> listUser = new ArrayList<User>();
+    public static ArrayList <User> listUser = new ArrayList<>();
 
 }

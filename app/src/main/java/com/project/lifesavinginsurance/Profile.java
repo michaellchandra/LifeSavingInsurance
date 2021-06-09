@@ -21,6 +21,7 @@ public class Profile extends AppCompatActivity {
         setContentView(R.layout.activity_profile);
 
         profile_button_logout = findViewById(R.id.profile_button_logout);
+
         profile_textView_umur = findViewById(R.id.profile_textView_umur);
         profile_textView_ttl = findViewById(R.id.profile_textView_ttl);
         profile_textView_noTelp = findViewById(R.id.profile_textView_noTelp);
@@ -31,10 +32,9 @@ public class Profile extends AppCompatActivity {
         intent = getIntent();
 
         User user = intent.getParcelableExtra("IDnama");
-//        user = intent.getParcelableExtra("IDemail");
+//
 
         profile_textView_nama.setText(user.getNama());
-        profile_textView_email.setText(user.getEmail());
 
         profile_button_logout.setOnClickListener(new View.OnClickListener() {
             @Override

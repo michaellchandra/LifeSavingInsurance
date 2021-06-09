@@ -6,7 +6,6 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.text.Editable;
 import android.text.TextWatcher;
-import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.TextView;
@@ -58,11 +57,8 @@ public class LoginMenu extends AppCompatActivity {
                         if(Akun.listUser.get(i).getEmail().equalsIgnoreCase(email) && Akun.listUser.get(i).getPassword().equalsIgnoreCase(password)){
                             exists = true;
                             Toast.makeText(getBaseContext(), "Login Berhasil!", Toast.LENGTH_LONG).show();
-                            Intent intent = new Intent(getBaseContext(), InputTransfer.class);
-                            User user = getIntent().getParcelableExtra("IDnama");
-//                            Log.d("testing", user.getEmail());
-
-                            intent.putExtra("IDnama", user);
+                            Intent intent = new Intent(getBaseContext(), MenuToolbar.class);
+                            intent.putExtra("IDnama", temp);
                             intent.putExtra("index", i);
                             startActivity(intent);
                             finish();
