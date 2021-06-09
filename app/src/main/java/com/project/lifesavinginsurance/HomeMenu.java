@@ -74,7 +74,7 @@ public class HomeMenu extends AppCompatActivity {
 
         Intent intent = getIntent();
 //        user = intent.getParcelableExtra("IDuang");
-        User user = getIntent().getParcelableExtra("IDnama");
+        user = getIntent().getParcelableExtra("IDnama");
 
 //        user = getIntent().getParcelableExtra("IDnama");
 //        user.getNama();
@@ -114,6 +114,9 @@ public class HomeMenu extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 Intent intent = new Intent(getBaseContext(), Profile.class);
+                intent.putExtra("IDnama", user);
+//                Log.d("testtest", user.getNama());
+
                 startActivity(intent);
             }
         });

@@ -64,7 +64,7 @@ public class Payment extends AppCompatActivity {
         Log.d("sembarang", String.valueOf(uang));
 
         user.setUang(uang+"");
-        
+
 //        String deposit = intent.getParcelableExtra("totalDeposit");
         payment_textView_totalDeposit.setText(saldoDeposit);
 
@@ -74,6 +74,7 @@ public class Payment extends AppCompatActivity {
             public void onClick(View v) {
 
                 Intent intent = new Intent(getBaseContext(), HomeMenu.class);
+                intent.putExtra("IDnama", user);
                 intent.putExtra("IDuang", user);
                 Log.d("testtest", user.getNama());
                 startActivity(intent);

@@ -27,11 +27,9 @@ public class Profile extends AppCompatActivity {
         profile_textView_nama = findViewById(R.id.profile_textView_nama);
         profile_textView_email = findViewById(R.id.profile_textView_email);
 
-        Intent intent = new Intent();
-        intent = getIntent();
+        Intent intent = getIntent();
 
         User user = intent.getParcelableExtra("IDnama");
-
 
         profile_textView_nama.setText(user.getNama());
         profile_textView_email.setText(user.getEmail());
