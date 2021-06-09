@@ -3,61 +3,51 @@ package Account;
 import android.os.Parcel;
 import android.os.Parcelable;
 
-public class DataPemegangPolis {
-    private String namaasuransi, namacalon, namapemegang, hubungan;
+public class DataPemegangPolis implements Parcelable {
+    private String namaasuransi, namacalon,jeniskelamin, namapemegang, hubungan;
     private int umurcalon, umurpemegang, masapembayaran;
-    private long Uang;
+    private long Uangp, Uang;
 
     public DataPemegangPolis() {
-        this.namaasuransi="";
+        this.namaasuransi = "";
         this.namacalon = "";
+        this.jeniskelamin = "";
         this.namapemegang = "";
         this.hubungan = "";
         this.umurcalon = 0;
         this.umurpemegang = 0;
         this.masapembayaran = 0;
-        this.Uang = 0;
+        Uangp = 0;
+        Uang = 0;
     }
 
-    public DataPemegangPolis(String namaasuransi,String namacalon, String namapemegang, String hubungan, int umurcalon, int umurpemegang, int masapembayaran, long uang) {
-        this.namaasuransi=namaasuransi;
+    public DataPemegangPolis(String namaasuransi, String namacalon, String jeniskelamin, String namapemegang, String hubungan, int umurcalon, int umurpemegang, int masapembayaran, long uangp, long uang) {
+        this.namaasuransi = namaasuransi;
         this.namacalon = namacalon;
+        this.jeniskelamin = jeniskelamin;
         this.namapemegang = namapemegang;
         this.hubungan = hubungan;
         this.umurcalon = umurcalon;
         this.umurpemegang = umurpemegang;
         this.masapembayaran = masapembayaran;
-        this.Uang = uang;
+        Uangp = uangp;
+        Uang = uang;
     }
 
-    protected DataPemegangPolis(Parcel in){
+    protected DataPemegangPolis(Parcel in) {
         namaasuransi = in.readString();
         namacalon = in.readString();
+        jeniskelamin = in.readString();
         namapemegang = in.readString();
         hubungan = in.readString();
         umurcalon = in.readInt();
         umurpemegang = in.readInt();
         masapembayaran = in.readInt();
+        Uangp = in.readLong();
         Uang = in.readLong();
     }
 
-
-    public void writeToParcel(Parcel dest, int flags){
-        dest.writeString(namaasuransi);
-        dest.writeString(namacalon);
-        dest.writeString(namapemegang);
-        dest.writeString(hubungan);
-        dest.writeInt(umurcalon);
-        dest.writeInt(umurpemegang);
-        dest.writeInt(masapembayaran);
-        dest.writeLong(Uang);
-    }
-
-    public int describeContents(){
-        return 0;
-    }
-
-    public static final Parcelable.Creator<DataPemegangPolis> CREATOR = new Parcelable.Creator<DataPemegangPolis>() {
+    public static final Creator<DataPemegangPolis> CREATOR = new Creator<DataPemegangPolis>() {
         @Override
         public DataPemegangPolis createFromParcel(Parcel in) {
             return new DataPemegangPolis(in);
@@ -69,11 +59,11 @@ public class DataPemegangPolis {
         }
     };
 
-    public String getNamaasuransi(){
+    public String getNamaasuransi() {
         return namaasuransi;
     }
 
-    public void setNamaasuransi(String namaasuransi){
+    public void setNamaasuransi(String namaasuransi) {
         this.namaasuransi = namaasuransi;
     }
 
@@ -83,6 +73,14 @@ public class DataPemegangPolis {
 
     public void setNamacalon(String namacalon) {
         this.namacalon = namacalon;
+    }
+
+    public String getJeniskelamin() {
+        return namacalon;
+    }
+
+    public void setJeniskelamin(String jeniskelamin) {
+        this.jeniskelamin = jeniskelamin;
     }
 
     public String getNamapemegang() {
@@ -125,11 +123,38 @@ public class DataPemegangPolis {
         this.masapembayaran = masapembayaran;
     }
 
+    public long getUangp() {
+        return Uangp;
+    }
+
+    public void setUangp(long uangp) {
+        Uangp = uangp;
+    }
+
     public long getUang() {
         return Uang;
     }
 
     public void setUang(long uang) {
         Uang = uang;
+    }
+
+    @Override
+    public int describeContents() {
+        return 0;
+    }
+
+    @Override
+    public void writeToParcel(Parcel dest, int flags) {
+        dest.writeString(namaasuransi);
+        dest.writeString(namacalon);
+        dest.writeString(jeniskelamin);
+        dest.writeString(namapemegang);
+        dest.writeString(hubungan);
+        dest.writeInt(umurcalon);
+        dest.writeInt(umurpemegang);
+        dest.writeInt(masapembayaran);
+        dest.writeLong(Uangp);
+        dest.writeLong(Uang);
     }
 }

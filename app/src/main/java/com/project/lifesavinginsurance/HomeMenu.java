@@ -8,6 +8,7 @@ import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
 import android.widget.Button;
+import android.widget.ImageView;
 import android.widget.TextView;
 
 import com.denzcoskun.imageslider.ImageSlider;
@@ -22,6 +23,7 @@ import Account.User;
 public class HomeMenu extends AppCompatActivity {
 
     private Button home_button_plan100, home_button_isiSaldo;
+    private ImageView home_finance;
     private TextView home_textView_paymentHistory, home_textView_jumlahSaldo;
     User user;
 
@@ -67,7 +69,7 @@ public class HomeMenu extends AppCompatActivity {
         home_button_plan100 = findViewById(R.id.home_button_plan100);
         home_textView_jumlahSaldo = findViewById(R.id.home_textView_rupiah);
         home_textView_paymentHistory = findViewById(R.id.home_textView_paymentHistory);
-
+        home_finance = findViewById(R.id.home_finance);
         Intent intent = getIntent();
         user = intent.getParcelableExtra("IDuang");
 
@@ -86,11 +88,17 @@ public class HomeMenu extends AppCompatActivity {
 
             }
         });
-
+        home_finance.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent1 = new Intent(getBaseContext(), ListAsuransi.class);
+                startActivity(intent1);
+            }
+        });
         home_button_plan100.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(getBaseContext(), Profile.class);
+                Intent intent = new Intent(getBaseContext(), AsuransiTradisional.class);
                 startActivity(intent);
             }
         });
