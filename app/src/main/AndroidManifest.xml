@@ -24,7 +24,6 @@
         <activity android:name=".InputTransfer" />
         <activity android:name=".Support" />
         <activity android:name=".Payment" />
-        <activity android:name=".Passcode" />
         <activity android:name=".RegisterMenu" />
         <activity android:name=".HomeMenu" />
         <activity android:name=".LoginMenu" />

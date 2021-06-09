@@ -17,13 +17,18 @@ import com.google.android.material.floatingactionbutton.FloatingActionButton;
 import java.util.ArrayList;
 
 import Account.DataPemegangPolis;
+import Account.User;
 
 public class ListAsuransi extends AppCompatActivity {
     private RecyclerView list_recyclerview_list;
+    private ImageView list_imageview_back;
     private ArrayList<DataPemegangPolis> dataBarang;
     private FormPlan100Adapter adapter;
     private TextView recyclerview_nodata;
     private FloatingActionButton recyclerview_FAB_add;
+    User user;
+
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -31,6 +36,22 @@ public class ListAsuransi extends AppCompatActivity {
         initView();
         setupRecyclerView();
         setListener();
+
+        Intent intent = getIntent();
+        user = getIntent().getParcelableExtra("IDnama");
+        intent.putExtra("IDnama", user);
+
+        list_imageview_back = findViewById(R.id.list_imageview_back);
+
+        list_imageview_back.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(getBaseContext(), HomeMenu.class);
+                startActivity(intent);
+                finish();
+            }
+        });
+
     }
     @Override
     protected void onActivityResult(int requestCode, int resultCode, @Nullable Intent data) {

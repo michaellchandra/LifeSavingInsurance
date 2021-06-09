@@ -6,13 +6,17 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
+import android.widget.ImageView;
 import android.widget.RadioButton;
 import android.widget.RadioGroup;
 import android.widget.Toolbar;
 
 import com.google.android.material.textfield.TextInputLayout;
 
+import java.util.List;
+
 import Account.DataPemegangPolis;
+import Account.User;
 import Model.Plan100Model;
 
 
@@ -23,13 +27,31 @@ public class FormPlan100 extends AppCompatActivity {
     private RadioGroup form_radioGroup;
     private RadioButton form_radioButton1, form_radioButton2;
     private Button form_button;
+    private ImageView formplan100_imageView_back;
     int dx = 0;
     int lx = 0;
+    User user;
     String jeniskelamin="";
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_form_plan100);
+
+        Intent intent = getIntent();
+        user = getIntent().getParcelableExtra("IDnama");
+        intent.putExtra("IDnama", user);
+
+        formplan100_imageView_back = findViewById(R.id.formplan100_imageView_back);
+
+        formplan100_imageView_back.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(getBaseContext(), ListAsuransi.class);
+                startActivity(intent);
+                finish();
+            }
+        });
+
 
         initView();
         setListener();

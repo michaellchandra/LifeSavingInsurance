@@ -38,7 +38,7 @@ public class InputTransfer extends AppCompatActivity {
         transfer_imageView_back.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(getBaseContext(), FragmentHome.class);
+                Intent intent = new Intent(getBaseContext(), HomeMenu.class);
                 startActivity(intent);
             }
         });
@@ -49,6 +49,7 @@ public class InputTransfer extends AppCompatActivity {
                 String uangDeposit = transfer_textInputLayout_jumlahTransfer.getEditText().getText().toString().trim();
 
                 if(!uangDeposit.isEmpty()){
+
 
                     Intent intent = new Intent(getBaseContext(), Payment.class);
                     User user = getIntent().getParcelableExtra("IDnama");

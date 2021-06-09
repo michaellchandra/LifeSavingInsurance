@@ -23,7 +23,7 @@ import Account.User;
 public class HomeMenu extends AppCompatActivity {
 
     private Button home_button_plan100, home_button_isiSaldo;
-    private ImageView home_finance;
+    private ImageView home_finance, home_imageView_profile;
     private TextView home_textView_paymentHistory, home_textView_jumlahSaldo;
     User user;
 
@@ -69,10 +69,15 @@ public class HomeMenu extends AppCompatActivity {
         home_button_plan100 = findViewById(R.id.home_button_plan100);
         home_textView_jumlahSaldo = findViewById(R.id.home_textView_rupiah);
         home_textView_paymentHistory = findViewById(R.id.home_textView_paymentHistory);
+        home_imageView_profile = findViewById(R.id.home_imageView_profile);
         home_finance = findViewById(R.id.home_finance);
+
         Intent intent = getIntent();
         user = intent.getParcelableExtra("IDuang");
 
+
+        user = getIntent().getParcelableExtra("IDnama");
+        intent.putExtra("IDnama", user);
         Log.d("testtest", user.getNama());
 
         home_textView_jumlahSaldo.setText(user.getUang());
@@ -99,6 +104,14 @@ public class HomeMenu extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 Intent intent = new Intent(getBaseContext(), AsuransiTradisional.class);
+                startActivity(intent);
+            }
+        });
+
+        home_imageView_profile.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(getBaseContext(), Profile.class);
                 startActivity(intent);
             }
         });
