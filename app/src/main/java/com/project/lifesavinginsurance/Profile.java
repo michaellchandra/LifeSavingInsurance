@@ -31,8 +31,10 @@ public class Profile extends AppCompatActivity {
         intent = getIntent();
 
         User user = intent.getParcelableExtra("IDnama");
+//        user = intent.getParcelableExtra("IDemail");
 
         profile_textView_nama.setText(user.getNama());
+        profile_textView_email.setText(user.getEmail());
 
         profile_button_logout.setOnClickListener(new View.OnClickListener() {
             @Override

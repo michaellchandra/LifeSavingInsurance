@@ -5,49 +5,24 @@ import android.os.Parcelable;
 
 public class User implements Parcelable {
 
-    private String nama, email, password, tanggalLahir, nomorTelepon;
+    private String nama, email, password, tanggalLahir, nomorTelepon, uang;
 
-    public User(String nama, String email, String password, String tanggalLahir, String telepon) {
+    public User(String nama, String email, String password, String tanggalLahir, String nomorTelepon, String uang) {
         this.nama = nama;
         this.email = email;
         this.password = password;
         this.tanggalLahir = tanggalLahir;
-        this.nomorTelepon = telepon;
-    }
-
-    public User() {
-        this.nama="";
-        this.email="";
-        this.password="";
-        this.tanggalLahir="";
-        this.nomorTelepon="";
-    }
-
-    public String getTanggalLahir() {
-        return tanggalLahir;
-    }
-
-    public void setTanggalLahir(String tanggalLahir) {
-        this.tanggalLahir = tanggalLahir;
-    }
-
-    public String getTelepon() {
-        return nomorTelepon;
-    }
-
-    public void setTelepon(String telepon) {
-        this.nomorTelepon = telepon;
-    }
-
-
-    public static Creator<User> getCREATOR() {
-        return CREATOR;
+        this.nomorTelepon = nomorTelepon;
+        this.uang = uang;
     }
 
     protected User(Parcel in) {
         nama = in.readString();
         email = in.readString();
         password = in.readString();
+        tanggalLahir = in.readString();
+        nomorTelepon = in.readString();
+        uang = in.readString();
     }
 
     public static final Creator<User> CREATOR = new Creator<User>() {
@@ -86,6 +61,30 @@ public class User implements Parcelable {
         this.password = password;
     }
 
+    public String getTanggalLahir() {
+        return tanggalLahir;
+    }
+
+    public void setTanggalLahir(String tanggalLahir) {
+        this.tanggalLahir = tanggalLahir;
+    }
+
+    public String getNomorTelepon() {
+        return nomorTelepon;
+    }
+
+    public void setNomorTelepon(String nomorTelepon) {
+        this.nomorTelepon = nomorTelepon;
+    }
+
+    public String getUang() {
+        return uang;
+    }
+
+    public void setUang(String uang) {
+        this.uang = uang;
+    }
+
     @Override
     public int describeContents() {
         return 0;
@@ -98,6 +97,6 @@ public class User implements Parcelable {
         dest.writeString(password);
         dest.writeString(tanggalLahir);
         dest.writeString(nomorTelepon);
-
+        dest.writeString(uang);
     }
 }

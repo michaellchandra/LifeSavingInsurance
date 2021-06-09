@@ -5,6 +5,7 @@ import androidx.appcompat.app.AppCompatActivity;
 import android.content.Intent;
 import android.net.Uri;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.TextView;
@@ -16,11 +17,13 @@ import com.denzcoskun.imageslider.models.SlideModel;
 import java.util.ArrayList;
 import java.util.List;
 
+import Account.User;
+
 public class HomeMenu extends AppCompatActivity {
 
     private Button home_button_plan100, home_button_isiSaldo;
     private TextView home_textView_paymentHistory, home_textView_jumlahSaldo;
-
+    User user;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -65,11 +68,20 @@ public class HomeMenu extends AppCompatActivity {
         home_textView_jumlahSaldo = findViewById(R.id.home_textView_rupiah);
         home_textView_paymentHistory = findViewById(R.id.home_textView_paymentHistory);
 
+        Intent intent = getIntent();
+        user = intent.getParcelableExtra("IDuang");
+
+        Log.d("testtest", user.getNama());
+
+        home_textView_jumlahSaldo.setText(user.getUang());
+
 
         home_button_isiSaldo.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 Intent intent = new Intent(getBaseContext(), InputTransfer.class);
+                intent.putExtra("IDuang",user);
+                Log.d("testtest", user.getNama());
                 startActivity(intent);
 
             }

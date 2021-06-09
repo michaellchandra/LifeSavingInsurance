@@ -15,6 +15,7 @@ import com.google.android.material.textfield.TextInputLayout;
 
 import java.util.ArrayList;
 
+import Account.User;
 import Deposit.DataDeposit;
 import Deposit.Transfer;
 
@@ -48,8 +49,14 @@ public class InputTransfer extends AppCompatActivity {
                 String uangDeposit = transfer_textInputLayout_jumlahTransfer.getEditText().getText().toString().trim();
 
                 if(!uangDeposit.isEmpty()){
+
+
                     Intent intent = new Intent(getBaseContext(), Payment.class);
+                    User user = getIntent().getParcelableExtra("IDnama");
                     intent.putExtra("totalDeposit", uangDeposit);
+                    intent.putExtra("IDnama", user);
+                    intent.putExtra("IDuang", user);
+
                     startActivity(intent);
 
                 }

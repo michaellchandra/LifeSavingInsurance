@@ -8,6 +8,7 @@ import android.graphics.Color;
 import android.graphics.drawable.ColorDrawable;
 import android.os.Bundle;
 import android.os.CountDownTimer;
+import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.ImageView;
@@ -19,6 +20,7 @@ import com.google.android.material.textfield.TextInputLayout;
 import java.util.ArrayList;
 import java.util.Locale;
 
+import Account.User;
 import Deposit.DataDeposit;
 import Deposit.Transfer;
 
@@ -33,6 +35,7 @@ public class Payment extends AppCompatActivity {
     Dialog popup_operasional;
     private boolean TimerRunning;
     private ArrayList<DataDeposit> nominal;
+    User user;
 
 //    private long TimeLeftinMillis = START_TIME_IN_MILLIS;
 
@@ -54,8 +57,26 @@ public class Payment extends AppCompatActivity {
 
         Intent intent = getIntent();
         String saldoDeposit = intent.getStringExtra("totalDeposit");
+        user = getIntent().getParcelableExtra("IDuang");
 
+        int uang = Integer.parseInt(user.getUang()) + Integer.parseInt(saldoDeposit);
+
+        if (uang <= 0){
+            user.setUang(uang+"");
+        } else if (uang >0){
+            user.setUang(uang+"");
+        }
+
+
+
+
+        Log.d("sembarang", String.valueOf(uang));
+//        String deposit = intent.getParcelableExtra("totalDeposit");
         payment_textView_totalDeposit.setText(saldoDeposit);
+
+
+
+
 
 //        countDownTimer = new CountDownTimer(TimeLeftinMillis,1000) {
 //            @Override
@@ -79,11 +100,10 @@ public class Payment extends AppCompatActivity {
             @Override
             public void onClick(View v) {
 
-//                long deposit = Long.parseLong(transfer_textInputLayout_jumlahTransfer.getEditText().getText().toString().trim());
-//                nominal = new ArrayList<>();
-//                nominal.add(new DataDeposit(deposit));
-
-                Intent intent = new Intent(getBaseContext(), FragmentHome.class);
+//
+                Intent intent = new Intent(getBaseContext(), HomeMenu.class);
+                intent.putExtra("IDuang", user);
+                Log.d("testtest", user.getNama());
                 startActivity(intent);
                 finish();
 
