@@ -75,7 +75,6 @@ public class HomeMenu extends AppCompatActivity {
 
         home_textView_jumlahSaldo.setText(user.getUang());
 
-
         home_button_isiSaldo.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {

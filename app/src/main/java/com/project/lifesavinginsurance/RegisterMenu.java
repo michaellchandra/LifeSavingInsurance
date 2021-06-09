@@ -7,6 +7,7 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.text.Editable;
 import android.text.TextWatcher;
+import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.CheckBox;
@@ -117,8 +118,10 @@ public class RegisterMenu extends AppCompatActivity {
 
                 if (!nama.isEmpty() && !email.isEmpty() && !password.isEmpty() && !nomorTelpon.isEmpty() && !tanggalLahir.isEmpty() && register_checkBox_agree.isChecked()) {
                     Intent intent = new Intent(getBaseContext(), LoginMenu.class);
-                    User user = new User(nama, email, password, tanggalLahir, nomorTelpon);
+                    User user = new User(nama, email, password, tanggalLahir, nomorTelpon, "0");
                     Akun.listUser.add(user);
+                    Log.d("nama_temp_1", user.getNama());
+                    intent.putExtra("IDnama", user);
 
                     Toast.makeText(RegisterMenu.this, "Account Created!", Toast.LENGTH_SHORT).show();
 

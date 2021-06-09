@@ -33,7 +33,6 @@ public class Profile extends AppCompatActivity {
 
         User user = intent.getParcelableExtra("IDnama");
 //
-
         profile_textView_nama.setText(user.getNama());
 
         profile_button_logout.setOnClickListener(new View.OnClickListener() {

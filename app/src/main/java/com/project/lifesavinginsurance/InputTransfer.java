@@ -50,7 +50,6 @@ public class InputTransfer extends AppCompatActivity {
 
                 if(!uangDeposit.isEmpty()){
 
-
                     Intent intent = new Intent(getBaseContext(), Payment.class);
                     User user = getIntent().getParcelableExtra("IDnama");
                     intent.putExtra("totalDeposit", uangDeposit);
