@@ -73,11 +73,13 @@ public class HomeMenu extends AppCompatActivity {
         home_finance = findViewById(R.id.home_finance);
 
         Intent intent = getIntent();
-        user = intent.getParcelableExtra("IDuang");
+//        user = intent.getParcelableExtra("IDuang");
+        User user = getIntent().getParcelableExtra("IDnama");
 
-
-        user = getIntent().getParcelableExtra("IDnama");
+//        user = getIntent().getParcelableExtra("IDnama");
+//        user.getNama();
         intent.putExtra("IDnama", user);
+        intent.putExtra("IDuang", user);
         Log.d("testtest", user.getNama());
 
         home_textView_jumlahSaldo.setText(user.getUang());

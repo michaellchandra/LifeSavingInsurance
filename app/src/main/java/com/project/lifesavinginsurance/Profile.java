@@ -35,6 +35,8 @@ public class Profile extends AppCompatActivity {
 
         profile_textView_nama.setText(user.getNama());
         profile_textView_email.setText(user.getEmail());
+        profile_textView_noTelp.setText(user.getNomorTelepon());
+        profile_textView_ttl.setText(user.getTanggalLahir());
 
         profile_button_logout.setOnClickListener(new View.OnClickListener() {
             @Override

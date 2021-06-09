@@ -34,8 +34,6 @@ public class LoginMenu extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_login_menu);
 
-//        ActionBar actionBar = getSupportActionBar();
-//        actionBar.hide();
 
         listOrang = Akun.listUser;
         login_textInputLayout_email = findViewById(R.id.login_textInputLayout_email);

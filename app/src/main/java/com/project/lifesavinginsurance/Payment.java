@@ -64,9 +64,7 @@ public class Payment extends AppCompatActivity {
         Log.d("sembarang", String.valueOf(uang));
 
         user.setUang(uang+"");
-
-
-
+        
 //        String deposit = intent.getParcelableExtra("totalDeposit");
         payment_textView_totalDeposit.setText(saldoDeposit);
 
@@ -75,7 +73,6 @@ public class Payment extends AppCompatActivity {
             @Override
             public void onClick(View v) {
 
-//
                 Intent intent = new Intent(getBaseContext(), HomeMenu.class);
                 intent.putExtra("IDuang", user);
                 Log.d("testtest", user.getNama());
@@ -83,9 +80,6 @@ public class Payment extends AppCompatActivity {
                 finish();
 
                 Toast.makeText(Payment.this, "Terima Kasih Pembayaran Terkonfirmasi!", Toast.LENGTH_LONG).show();
-
-
-
 
             }
         });
