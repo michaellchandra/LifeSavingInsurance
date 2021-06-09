@@ -58,7 +58,8 @@ public class LoginMenu extends AppCompatActivity {
                             exists = true;
                             Toast.makeText(getBaseContext(), "Login Berhasil!", Toast.LENGTH_LONG).show();
                             Intent intent = new Intent(getBaseContext(), MenuToolbar.class);
-                            intent.putExtra("IDnama", temp);
+                            User user = intent.getParcelableExtra("IDnama");
+                            intent.putExtra("IDnama", user);
                             intent.putExtra("index", i);
                             startActivity(intent);
                             finish();
