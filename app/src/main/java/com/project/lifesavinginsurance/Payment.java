@@ -61,39 +61,14 @@ public class Payment extends AppCompatActivity {
 
         int uang = Integer.parseInt(user.getUang()) + Integer.parseInt(saldoDeposit);
 
-        if (uang <= 0){
-            user.setUang(uang+"");
-        } else if (uang >0){
-            user.setUang(uang+"");
-        }
-
-
-
-
         Log.d("sembarang", String.valueOf(uang));
+
+        user.setUang(uang+"");
+
+
+
 //        String deposit = intent.getParcelableExtra("totalDeposit");
         payment_textView_totalDeposit.setText(saldoDeposit);
-
-
-
-
-
-//        countDownTimer = new CountDownTimer(TimeLeftinMillis,1000) {
-//            @Override
-//            public void onTick(long millisUntilFinished) {
-//                TimeLeftinMillis = millisUntilFinished;
-//            }
-//
-//            @Override
-//            public void onFinish() {
-//
-//            }
-//        }.start();
-//        TimerRunning = true;
-//        Data= new ArrayList<JumlahDeposit>();
-//        for(int i = 0; i <Data.size(); i++) {
-//        JumlahDeposit data= Data.get(i);
-
 
 
         payment_button_confirm.setOnClickListener(new View.OnClickListener() {

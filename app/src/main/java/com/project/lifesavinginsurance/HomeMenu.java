@@ -80,6 +80,7 @@ public class HomeMenu extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 Intent intent = new Intent(getBaseContext(), InputTransfer.class);
+                intent.putExtra("IDnama", user);
                 intent.putExtra("IDuang",user);
                 Log.d("testtest", user.getNama());
                 startActivity(intent);
