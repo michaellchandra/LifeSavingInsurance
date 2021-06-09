@@ -46,7 +46,7 @@ public class FragmentProfile extends Fragment {
 //        user.setNama(RegisterMenu(nama));
 
 
-        profile_textView_nama.setText(user.getNama());
+//        profile_textView_nama.setText(user.getNama());
 
 
 
