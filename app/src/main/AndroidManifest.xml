@@ -12,7 +12,9 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.LifeSavingInsurance">
-        <activity android:name=".plan100_info"></activity>
+        <activity android:name=".AsuransiKesehatan"></activity>
+        <activity android:name=".AsuransiKendaraan" />
+        <activity android:name=".plan100_info" />
         <activity android:name=".ListAsuransi" />
         <activity android:name=".FormPlan100" />
         <activity android:name=".AsuransiTradisional" />

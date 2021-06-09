@@ -64,7 +64,7 @@ public class HomeMenu extends AppCompatActivity {
 
             }
         });
-
+        home_imageView_profile = findViewById(R.id.home_imageView_profile);
         home_button_isiSaldo = findViewById(R.id.home_button_isiSaldo);
         home_button_plan100 = findViewById(R.id.home_button_plan100);
         home_textView_jumlahSaldo = findViewById(R.id.home_textView_rupiah);
@@ -95,6 +95,13 @@ public class HomeMenu extends AppCompatActivity {
 
             }
         });
+        home_imageView_profile.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent1 = new Intent(getBaseContext(), Profile.class);
+                startActivity(intent1);
+            }
+        });
         home_finance.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -105,7 +112,7 @@ public class HomeMenu extends AppCompatActivity {
         home_button_plan100.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(getBaseContext(), AsuransiTradisional.class);
+                Intent intent = new Intent(getBaseContext(), AsuransiKesehatan.class);
                 startActivity(intent);
             }
         });
