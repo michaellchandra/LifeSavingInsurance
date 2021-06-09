@@ -82,6 +82,7 @@ public class Payment extends AppCompatActivity {
                 startActivity(intent);
                 finish();
 
+
                 Toast.makeText(Payment.this, "Terima Kasih Pembayaran Terkonfirmasi!", Toast.LENGTH_LONG).show();
 
 
