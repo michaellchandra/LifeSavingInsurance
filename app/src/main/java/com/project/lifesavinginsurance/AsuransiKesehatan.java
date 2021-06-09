@@ -2,9 +2,12 @@ package com.project.lifesavinginsurance;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.Intent;
+import android.media.Image;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
+import android.widget.ImageView;
 import android.widget.RadioButton;
 import android.widget.RadioGroup;
 import android.widget.TextView;
@@ -17,6 +20,7 @@ public class AsuransiKesehatan extends AppCompatActivity {
     private TextInputLayout kesehatan_textInput_usia;
     private TextView kesehatan_textview_usia, kesehatan_textview_premi;
     private Button kesehatan_button;
+    private ImageView kesehatan_button_back;
     String jeniskelamin="";
     String kelas="";
     @Override
@@ -34,7 +38,17 @@ public class AsuransiKesehatan extends AppCompatActivity {
         kesehatan_textInput_usia = findViewById(R.id.kesehatan_textInput_usia);
         kesehatan_textview_usia = findViewById(R.id.kesehatan_textview_usia);
         kesehatan_textview_premi = findViewById(R.id.kesehatan_textview_premi);
+        kesehatan_button_back = findViewById(R.id.kesehatan_button_back);
         kesehatan_button = findViewById(R.id.kesehatan_button);
+
+        kesehatan_button_back.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(getBaseContext(), HomeMenu.class);
+                startActivity(intent);
+
+            }
+        });
 
         kesehatan_button.setOnClickListener(new View.OnClickListener() {
             @Override

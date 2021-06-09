@@ -40,6 +40,7 @@ public class AsuransiKendaraan extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 Intent intent = new Intent(getBaseContext(), HomeMenu.class);
+                startActivity(intent);
             }
         });
         kendarran_button.setOnClickListener(new View.OnClickListener() {

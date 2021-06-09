@@ -22,7 +22,7 @@ import Account.User;
 
 public class HomeMenu extends AppCompatActivity {
 
-    private Button home_button_plan100, home_button_isiSaldo;
+    private Button home_button_plan100, home_button_isiSaldo ,home_button_kesehatan, home_button_kendaraan;
     private ImageView home_finance, home_imageView_profile;
     private TextView home_textView_paymentHistory, home_textView_jumlahSaldo;
     User user;
@@ -70,6 +70,8 @@ public class HomeMenu extends AppCompatActivity {
         home_textView_jumlahSaldo = findViewById(R.id.home_textView_rupiah);
         home_textView_paymentHistory = findViewById(R.id.home_textView_paymentHistory);
         home_imageView_profile = findViewById(R.id.home_imageView_profile);
+        home_button_kendaraan = findViewById(R.id.home_button_kendaraan);
+        home_button_kesehatan  = findViewById(R.id.home_button_kesehatan);
         home_finance = findViewById(R.id.home_finance);
 
         Intent intent = getIntent();
@@ -124,6 +126,22 @@ public class HomeMenu extends AppCompatActivity {
                 intent.putExtra("IDnama", user);
 //                Log.d("testtest", user.getNama());
 
+                startActivity(intent);
+            }
+        });
+
+        home_button_kendaraan.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(getBaseContext(), AsuransiKendaraan.class);
+                startActivity(intent);
+            }
+        });
+
+        home_button_kesehatan.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(getBaseContext(), AsuransiKesehatan.class);
                 startActivity(intent);
             }
         });
