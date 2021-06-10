@@ -114,7 +114,7 @@ public class HomeMenu extends AppCompatActivity {
         home_button_plan100.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(getBaseContext(), AsuransiKesehatan.class);
+                Intent intent = new Intent(getBaseContext(), AsuransiTradisional.class);
                 startActivity(intent);
             }
         });

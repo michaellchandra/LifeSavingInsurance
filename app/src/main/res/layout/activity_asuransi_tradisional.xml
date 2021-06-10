@@ -35,7 +35,7 @@
                 app:titleTextColor="#FFFFFF" />
 
             <ImageView
-                android:id="@+id/imageView10"
+                android:id="@+id/plan100_imageview_home"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="16dp"
@@ -287,14 +287,6 @@
                 android:textColor="#000000"
                 app:layout_constraintStart_toEndOf="@+id/textView28"
                 app:layout_constraintTop_toTopOf="@+id/textView28" />
-
-            <TextView
-                android:id="@+id/plan100_masaa"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:textColor="#000000"
-                tools:layout_editor_absoluteX="190dp"
-                tools:layout_editor_absoluteY="633dp" />
 
             <com.google.android.material.textfield.TextInputLayout
                 android:id="@+id/main_textinput_umur"

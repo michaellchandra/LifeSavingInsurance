@@ -10,6 +10,7 @@ import android.text.TextWatcher;
 import android.view.View;
 import android.widget.Button;
 import android.widget.DatePicker;
+import android.widget.ImageView;
 import android.widget.RadioButton;
 import android.widget.RadioGroup;
 import android.widget.TextView;
@@ -30,6 +31,7 @@ public class AsuransiTradisional extends AppCompatActivity {
     private TextView plan100_semesteran;
     private TextView plan100_triwulan;
     private TextView plan100_bulanan;
+    private ImageView plan100_imageview_home;
     private List<Plan100Model> dataNominal;
     int dx = 0;
     int lx = 0;
@@ -60,7 +62,7 @@ public class AsuransiTradisional extends AppCompatActivity {
         main_textinput_umur = findViewById(R.id.main_textinput_umur);
         main_button_hitung = findViewById(R.id.main_button_hitung);
         main_textinput_masa = findViewById(R.id.main_textinput_masa);
-
+        plan100_imageview_home = findViewById(R.id.plan100_imageview_home);
         plan100_umur = findViewById(R.id.plan100_umur);
         plan100_tahunan = findViewById(R.id.plan100_tahunan);
         plan100_semesteran = findViewById(R.id.plan100_semesteran);
@@ -68,7 +70,14 @@ public class AsuransiTradisional extends AppCompatActivity {
         plan100_bulanan = findViewById(R.id.plan100_bulanan);
         plan100_uangp = findViewById(R.id.plan100_uangp);
         plan100_masap = findViewById(R.id.plan100_masap);
-        plan100_masaa = findViewById(R.id.plan100_masaa);
+        plan100_imageview_home.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(getBaseContext(), HomeMenu.class);
+                startActivity(intent);
+                finish();
+            }
+        });
         main_radiogroup_jeniskelamin = findViewById(R.id.menu_radiogroup_jeniskelamin);
 
 
