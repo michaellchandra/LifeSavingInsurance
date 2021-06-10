@@ -110,11 +110,12 @@
 
             <Button
                 android:id="@+id/main_button_hitung"
-                android:layout_width="102dp"
+                android:layout_width="300dp"
                 android:layout_height="47dp"
-                android:layout_marginTop="620dp"
-                android:background="@drawable/support_shape"
+                android:layout_marginTop="610dp"
+                android:background="@drawable/button_color"
                 android:text="Hitung"
+                android:textColor="@color/white"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/toolbar" />
